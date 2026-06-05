@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menyétfélék világa</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f8fff8, #dff5df);
+    color:#333;
+}
+
+header{
+    background:#7fc97f;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    margin:0;
+    font-size:40px;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:30px;
+}
+
+.card{
+    width:420px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h2{
+    color:#2d6a2d;
+}
+
+.card p{
+    text-align:justify;
+    line-height:1.6;
+}
+
+footer{
+    background:#7fc97f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+#welcomePopup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.welcome-card{
+    background:white;
+    width:600px;
+    max-width:90%;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+
+.welcome-card h1{
+    color:#2d6a2d;
+    margin-bottom:20px;
+}
+
+.welcome-card p{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.welcome-card button{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.welcome-card button:hover{
+    background:#388E3C;
+    transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+<div id="welcomePopup">
+    <div class="welcome-card">
+        <h1>Üdvözöllek!</h1>
+
+        <p>
+            Köszöntelek a Menyétfélék és Különleges Vízi Élőlények
+            világában! Ezen a weboldalon számos érdekes állatot
+            ismerhetsz meg részletes leírásokkal és képekkel.
+        </p>
+
+        <p>
+            Kattints az alábbi gombra az oldal megtekintéséhez!
+        </p>
+
+        <button onclick="closePopup()">
+            Belépés az oldalra
+        </button>
+    </div>
+</div>
+<header>
+    <h1>Menyétfélék világa</h1>
+    <p>Bemutatjuk a menyétfélék családjának néhány érdekes tagját.</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <img src="img/menyet.jpg" alt="Menyét">
+        <div class="card-content">
+            <h2>Menyét</h2>
+
+            <p>
+                A menyét a menyétfélék családjának egyik legismertebb és egyben
+                legkisebb tagja. Teste hosszú és karcsú, lábai rövidek, ami
+                lehetővé teszi számára, hogy könnyedén mozogjon a bokrok között
+                és a föld alatti járatokban. Bundája általában barna színű,
+                hasa világosabb. Egyes északi területeken télen fehér bundát
+                növeszt, amely segíti a rejtőzködésben.
+            </p>
+
+            <p>
+                A menyét rendkívül ügyes és gyors vadász. Fő táplálékát egerek,
+                pockok és más kisebb rágcsálók alkotják, de alkalmanként
+                madarakat, tojásokat, gyíkokat és rovarokat is elfogyaszt.
+                Nagyon bátor állat, és gyakran nála nagyobb zsákmányt is képes
+                elejteni. A gazdák számára hasznos lehet, mivel sok olyan
+                rágcsálót pusztít el, amelyek károkat okoznának a termésben.
+            </p>
+
+            <p>
+                Magyarországon is megtalálható erdőkben, mezőkön és
+                mezőgazdasági területeken. Többnyire magányosan él, és
+                territóriumát más menyétekkel szemben védi.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/Ferret.jpg" alt="Görény">
+        <div class="card-content">
+            <h2>Görény</h2>
+
+            <p>
+                A görény közepes méretű ragadozó emlős, amely a menyétfélék
+                családjába tartozik. Hosszú teste, rövid lábai és sötét színű
+                bundája miatt könnyen felismerhető. Szaglása rendkívül fejlett,
+                ami nagy segítséget nyújt számára a vadászat során.
+            </p>
+
+            <p>
+                Főként kisebb emlősöket, békákat, madarakat és tojásokat
+                fogyaszt. Éjszakai életmódot folytat, ezért nappal ritkán lehet
+                látni. Vadászat közben csendesen közelíti meg zsákmányát,
+                majd gyors támadással ejti el azt.
+            </p>
+
+            <p>
+                A házi görény a vadon élő görény rokona, amelyet az emberek már
+                évszázadok óta tartanak. Játékos, intelligens állat, ezért sokan
+                házi kedvencként is kedvelik. A vadon élő görény azonban jóval
+                önállóbb és óvatosabb az emberrel szemben.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/vidra.jpg" alt="Vidra">
+        <div class="card-content">
+            <h2>Vidra</h2>
+
+            <p>
+                A vidra a menyétfélék családjának egyik legjobban úszó tagja.
+                Folyók, tavak és mocsarak közelében él. Teste áramvonalas,
+                lábujjai között úszóhártya található, így gyorsan és ügyesen
+                mozog a vízben.
+            </p>
+
+            <p>
+                Táplálékának legnagyobb részét a halak alkotják, de békákat,
+                rákokat és más vízi élőlényeket is elfogyaszt. Rendkívül ügyes
+                vadász, akár több percig is képes a víz alatt maradni, miközben
+                zsákmányát üldözi.
+            </p>
+
+            <p>
+                A vidrát sokan játékos természetéről ismerik. Gyakran figyelhető
+                meg, ahogy csúszkál a sáros vagy havas partokon. Magyarországon
+                védett fajnak számít, ezért különösen fontos az élőhelyeinek
+                megőrzése.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/borz.jpg" alt="Borz">
+        <div class="card-content">
+            <h2>Borz</h2>
+
+            <p>
+                A borz zömök testű, erős emlős, amely fekete-fehér csíkos
+                fejéről könnyen felismerhető. Elsősorban erdős és bokros
+                területeken él. Hatalmas föld alatti járatrendszereket ás,
+                amelyeket kotoréknak nevezünk.
+            </p>
+
+            <p>
+                Mindenevő állat. Fogyaszt rovarokat, gilisztákat, kisebb
+                emlősöket, gyümölcsöket, magvakat és növényi részeket is.
+                Táplálkozása nagyban függ az évszakoktól és az adott területen
+                található élelem mennyiségétől.
+            </p>
+
+            <p>
+                A borz többnyire éjszaka aktív. Nappal a kotorékában pihen,
+                amelyet akár több generáción keresztül is használhat a család.
+                Nagyon tiszta állat, rendszeresen karbantartja és tisztítja
+                lakóhelyét.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src= "img/rozsomak.jpg"  alt="Rozsomák">
+        <div class="card-content">
+            <h2>Rozsomák</h2>
+
+            <p>
+                A rozsomák a menyétfélék egyik legerősebb és legkitartóbb
+                tagja. Elsősorban az északi félteke hideg vidékein él,
+                például Kanadában, Alaszkában és Skandináviában. Vastag bundája
+                jól védi a kemény téli időjárástól.
+            </p>
+
+            <p>
+                Ragadozó és dögevő egyaránt. Kisebb emlősöket, madarakat és
+                halakat fogyaszt, de gyakran nagyobb ragadozók által elejtett
+                állatok maradványait is megeszi. Híres arról, hogy rendkívül
+                bátor, és sokszor nála jóval nagyobb állatokkal is szembeszáll.
+            </p>
+
+            <p>
+                A rozsomák nagy területeket jár be táplálék után kutatva.
+                Erős állkapcsa és izmos teste miatt az északi erdők egyik
+                legfélelmetesebb ragadozójának számít. Bár külseje zömök,
+                meglepően gyorsan tud mozogni a hóban és a hegyvidéki
+                környezetben.
+            </p>
+        </div>
+    </div>
+
+</div>
+<div style="text-align:center; margin:30px;">
+    <a href="vizi-elolenyek.html" class="gomb">
+        Különleges vízi élőlények megtekintése
+    </a>
+</div>
+
+<footer>
+    
+</footer>
+
+    </a>
+</div>
+<script>
+function closePopup(){
+    document.getElementById("welcomePopup").style.display = "none";
+}
+</script>
+</body>
+</html>
+
